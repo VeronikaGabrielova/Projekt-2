@@ -1,4 +1,7 @@
-//POLE
+
+//Veronika Gabrielová
+
+//***************************************************POLE****************************************************
 const countries = [
   "United States",
   "China",
@@ -23,7 +26,7 @@ const countries = [
 ];
 
 //*************************************************PRVNÍ ČÁST***********************************************
-/*
+
 function checkCountry(country, countries){
     if (typeof country !== "string" || country.length <= 0){
         console.log(`Zadali jste neplatný dotaz ${country}.`)
@@ -37,10 +40,10 @@ checkCountry("Germany", countries);
 checkCountry("United States", countries);
 checkCountry(1000, countries);
 checkCountry("", countries);
-*/
+
 
 //************************************************DRUHÁ ČÁST************************************************
-/*
+
 function addCountry(country, countries) {
   if (typeof country !== "string" || country.length <= 0) {
     console.log(`Zadali jste neplatný dotaz: ${country}`);
@@ -63,9 +66,9 @@ addCountry("Mexico", countries);
 addCountry("Poland", countries);
 addCountry("", countries);
 console.log(countries);
-*/
+
 //***********************************************TŘETÍ ČÁST**************************************************
-/*
+
 function removeCountry(country, countries){
     if (typeof country !== "string" || country.length <= 0){
         console.log(`Zadali jste neplatný dotaz: ${country}`)
@@ -80,10 +83,10 @@ function removeCountry(country, countries){
     }
 }
 
-// Pro kontrolu správnosti zavolej následující funkci s parametry
+
 removeCountry("", countries);
 removeCountry("Vietnam", countries);
 removeCountry("Laos", countries);
 removeCountry("Thailand", countries);
 console.log(countries)
-*/
+

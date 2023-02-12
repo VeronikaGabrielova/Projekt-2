@@ -1,4 +1,7 @@
-//OBJEKTY
+
+//Veronika Gabrielová
+
+//**********************************************OBJEKTY**************************************
 const countriesPopulation = [
   { country: "China", population: 1439323776 },
   { country: "India", population: 1379302771 },
@@ -14,7 +17,7 @@ const countriesPopulation = [
 
 const populationTotal = 8000000000;
 
-//FUNKCE PRO VÝPOČET PROCENTA
+//**********************************FUNKCE PRO VÝPOČET PROCENTA******************************
 
 countriesPopulation.forEach(percentageOfPopulation);
 
@@ -23,12 +26,12 @@ function percentageOfPopulation(data) {
   console.log(`${data.country} ${percentage}%`);
 }
 
-//VYTVOŘENÍ KOPIE POLE
+//***********************************VYTVOŘENÍ KOPIE POLE************************************
 
 const copyCountries = countriesPopulation.slice();
 console.log(copyCountries);
 
-//SEŘAZENÍ DLE POČTU OBYVATEL
+//*********************************SEŘAZENÍ DLE POČTU OBYVATEL*******************************
 
 const sortsCountriesPopulation = function (arrayCopyCountries) {
   arrayCopyCountries.sort(function (a, b) {
@@ -44,7 +47,7 @@ const sortsCountriesPopulation = function (arrayCopyCountries) {
 
 sortsCountriesPopulation(copyCountries);
 
-//NOVÁ VLASTNOST ID
+//**************************************NOVÁ VLASTNOST ID***********************************
 
 copyCountries.forEach(addId);
 function addId(data, index) {
@@ -53,7 +56,7 @@ function addId(data, index) {
 }
 console.log(copyCountries);
 
-//NOVÁ VLASTNOST PERCENTAGE
+//***********************************NOVÁ VLASTNOST PERCENTAGE******************************
 
 copyCountries.forEach(addPercentage);
 
@@ -63,7 +66,7 @@ function addPercentage(data) {
 }
 console.log(copyCountries);
 
-//VYTVOŘENÍ A NAPLNĚNÍ NOVÉHO POLE
+//*********************************VYTVOŘENÍ A NAPLNĚNÍ NOVÉHO POLE*************************
 
 const newArray = [];
 
