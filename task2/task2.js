@@ -1,5 +1,6 @@
 
 //Veronika Gabrielová
+//DISCORD: Veronika G.
 
 //**********************************************OBJEKTY**************************************
 const countriesPopulation = [
