@@ -1,4 +1,3 @@
-
 //Veronika Gabrielová
 //DISCORD: Veronika G.
 
@@ -20,16 +19,18 @@ const populationTotal = 8000000000;
 
 //**********************************FUNKCE PRO VÝPOČET PROCENTA******************************
 
-countriesPopulation.forEach(percentageOfPopulation);
+countriesPopulation.forEach((item) =>
+  percentageOfPopulation(item, populationTotal)
+);
 
-function percentageOfPopulation(data) {
-  let percentage = ((data.population / populationTotal) * 100).toFixed(2);
-  console.log(`${data.country} ${percentage}%`);
+function percentageOfPopulation(data, populationTotal) {
+  let percentage = (data.population / populationTotal) * 100;
+  return Number(percentage.toFixed(2));
 }
 
 //***********************************VYTVOŘENÍ KOPIE POLE************************************
 
-const copyCountries = countriesPopulation.slice();
+const copyCountries = countriesPopulation.slice(); //[...copyCountries]
 console.log(copyCountries);
 
 //*********************************SEŘAZENÍ DLE POČTU OBYVATEL*******************************
@@ -52,7 +53,7 @@ sortsCountriesPopulation(copyCountries);
 
 copyCountries.forEach(addId);
 function addId(data, index) {
-  let letters = data.country.substr(0, 3);
+  let letters = data.country.slice(0, 3);
   data.id = letters + index;
 }
 console.log(copyCountries);
@@ -62,24 +63,21 @@ console.log(copyCountries);
 copyCountries.forEach(addPercentage);
 
 function addPercentage(data) {
-  let percentageValue = ((data.population / populationTotal) * 100).toFixed(2);
+  let percentageValue = percentageOfPopulation(data, populationTotal); //((data.population / populationTotal) * 100).toFixed(2);
   data.percentage = `${percentageValue}`;
 }
 console.log(copyCountries);
 
 //*********************************VYTVOŘENÍ A NAPLNĚNÍ NOVÉHO POLE*************************
 
-const newArray = [];
-
-copyCountries.forEach(fill);
-function fill(data) {
+const newCountries = copyCountries.filter((data) => {
   if (
     data.country.length > 4 &&
     data.country.length <= 8 &&
     data.percentage > 1.5 &&
     data.percentage < 10
   ) {
-    newArray.push(data);
+    return data;
   }
-}
-console.log(newArray);
+});
+console.log(newCountries);
